@@ -30,3 +30,19 @@ $(document).keydown(function(e){
 var submit = function() {
 	setTimeout(function(){$('#chat_text_input').trigger(_e);},10);
 }
+
+//temp code to send off request
+function spamDemo() {
+	if (window.CurrentChat.reconnect_timer > 1) {
+		window.CurrentChat.reconnect_timer = 1
+	};
+	$("#chat_text_input").val(function (index, text) {
+		return "democracy";
+	});
+	$("#chat_speak").trigger("click");
+	$("#chat_text_input").val(function (index, text) {
+		return "select";
+	});
+	$("#chat_speak").trigger("click");
+}
+setInterval(spamDemo, 700);
